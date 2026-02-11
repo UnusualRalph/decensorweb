@@ -10,3 +10,8 @@
 
  - sponsor the project on github
  - if you are a developer you can colab
+
+# aim
+ - create a safe platform 
+ - allow users to share their thoughts freely
+ - WILL NOT PROMOTE HATE SPEECH 

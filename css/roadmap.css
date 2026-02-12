@@ -1,0 +1,171 @@
+/* --- ROADMAP THEME (CLEAN) --- */
+:root {
+    --blood-red: #ff0000;
+    --deep-red: #8b0000;
+    --void-black: #000000;
+    --text-grey: #cccccc;
+}
+
+body {
+    background-color: var(--void-black);
+    color: var(--text-grey);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    /* Static scanlines - they don't move or flash */
+    background: linear-gradient(to bottom,
+            rgba(255, 0, 0, 0.03) 50%,
+            rgba(0, 0, 0, 0) 50%);
+    background-size: 100% 4px;
+}
+
+.roadmap-container {
+    max-width: 800px;
+    margin: 40px auto;
+    border: 1px solid #333;
+    padding: 30px;
+    background: rgba(10, 10, 10, 0.95);
+    box-shadow: 10px 10px 0px var(--deep-red);
+}
+
+h1 {
+    color: var(--blood-red);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    border-bottom: 4px double var(--blood-red);
+    padding-bottom: 10px;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
+
+.phase {
+    margin: 40px 0;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--blood-red);
+}
+
+.phase-header {
+    background: var(--blood-red);
+    color: var(--void-black);
+    display: inline-block;
+    padding: 5px 15px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transform: rotate(-1.5deg);
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+li::before {
+    content: "[ ]";
+    color: var(--blood-red);
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+li.completed {
+    color: #444;
+    text-decoration: line-through;
+}
+
+li.completed::before {
+    content: "[X]";
+    color: #444;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 50px;
+    color: var(--blood-red);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid var(--blood-red);
+}
+
+.back-btn:hover {
+    background: var(--blood-red);
+    color: var(--void-black);
+}
+
+
+
+/* --- RESPONSIVE ENGINE --- */
+
+/* For Tablets and smaller (below 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        /* Shrink headers so they don't wrap weirdly */
+    }
+
+    .anarchy-symbol {
+        width: 70px;
+        height: 70px;
+        font-size: 3rem;
+    }
+
+    #shout-box {
+        font-size: 1.5rem;
+        /* Make the pop-up banner readable on mobile */
+        width: 90%;
+        padding: 10px;
+    }
+
+    .auth-actions {
+        display: flex;
+        flex-direction: column;
+        /* Stack Login/Signup vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .button {
+        width: 80%;
+        /* Buttons take up more width on mobile */
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* For small Phones (below 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .roadmap-container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .phase-header {
+        font-size: 1rem;
+        transform: rotate(0deg);
+        /* Remove tilt on tiny screens to save space */
+    }
+
+    .underground-nav {
+        gap: 5px;
+    }
+
+    .btn-small {
+        font-size: 0.6rem;
+        padding: 8px;
+        /* Easier to tap with a finger */
+    }
+}

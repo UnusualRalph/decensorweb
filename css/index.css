@@ -124,3 +124,70 @@ h1 {
         transform: translate(1px, 1px);
     }
 }
+
+
+/* --- RESPONSIVE ENGINE --- */
+
+/* For Tablets and smaller (below 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        /* Shrink headers so they don't wrap weirdly */
+    }
+
+    .anarchy-symbol {
+        width: 70px;
+        height: 70px;
+        font-size: 3rem;
+    }
+
+    #shout-box {
+        font-size: 1.5rem;
+        /* Make the pop-up banner readable on mobile */
+        width: 90%;
+        padding: 10px;
+    }
+
+    .auth-actions {
+        display: flex;
+        flex-direction: column;
+        /* Stack Login/Signup vertically */
+        align-items: center;
+        width: 100%;
+    }
+
+    .button {
+        width: 80%;
+        /* Buttons take up more width on mobile */
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* For small Phones (below 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .roadmap-container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .phase-header {
+        font-size: 1rem;
+        transform: rotate(0deg);
+        /* Remove tilt on tiny screens to save space */
+    }
+
+    .underground-nav {
+        gap: 5px;
+    }
+
+    .btn-small {
+        font-size: 0.6rem;
+        padding: 8px;
+        /* Easier to tap with a finger */
+    }
+}

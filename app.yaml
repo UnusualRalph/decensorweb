@@ -1,5 +1,5 @@
-kind: wasmer.io/App.v0
 name: decensorweb
+app_id: da_K6AIot5U0WvY
 owner: thesquare
 package: .
-app_id: da_K6AIot5U0WvY
+kind: wasmer.io/App.v0

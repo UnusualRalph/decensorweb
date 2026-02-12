@@ -1,0 +1,556 @@
+/* --- about.css (SECURITY HARDENED) --- */
+/* FILE: css/about.css */
+/* R-CORP accountability & anti-censorship reinforcement */
+/* CSP compliant - no inline scripts, no unsafe evaluations */
+
+/* ----- ICON GRID & FALLBACKS ----- */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 25px 0 30px;
+    flex-wrap: wrap;
+}
+
+.manifesto-icon {
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--blood-red);
+    padding: 10px;
+    background: #0a0a0a;
+    box-shadow: 8px 8px 0 #3a0000;
+    transition: 0.2s;
+    object-fit: cover;
+}
+
+.manifesto-icon:hover {
+    box-shadow: 4px 4px 0 #8b0000;
+    border-color: #ff7777;
+}
+
+.icon-fallback {
+    display: none;
+    width: 120px;
+    height: 120px;
+    background: #1a0000;
+    border: 3px solid #ff0000;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ff4444;
+    text-shadow: 2px 2px 0 #2a0000;
+    box-shadow: 8px 8px 0 #3a0000;
+}
+
+/* ----- R-CORP BADGE – ACCOUNTABILITY VISUAL ----- */
+.rcorp-badge-shield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1e1e1e;
+    border: 2px solid #8b0000;
+    padding: 10px 15px;
+    box-shadow: 6px 6px 0 #2a0000;
+    min-width: 140px;
+    transform: rotate(1deg);
+}
+
+.shield-letter {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ff3333;
+    line-height: 1;
+    text-shadow: 3px 3px 0 #3a0000;
+}
+
+.shield-caption {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: #aaa;
+    border-top: 1px solid #8b0000;
+    padding-top: 5px;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ----- MANIFESTO TITLE & SUBHEADER ----- */
+.manifesto-title {
+    text-align: center;
+    font-size: 3rem;
+    border-bottom: 4px double #8b0000;
+    margin-bottom: 15px;
+    letter-spacing: 6px;
+    word-break: break-word;
+}
+
+.manifesto-subheader {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccaaaa;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    border-left: 4px solid #550000;
+    border-right: 4px solid #550000;
+    padding: 15px 10px;
+    background: rgba(80, 0, 0, 0.1);
+}
+
+.emphasis-red {
+    color: #ff6666;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px dotted #ff0000;
+}
+
+/* ----- CORE MISSION – STRONG ANTI-CENSORSHIP ----- */
+.core-mission {
+    background: rgba(100, 0, 0, 0.15);
+    border-left: 8px solid #ff0000;
+    padding: 25px;
+    margin: 40px 0;
+    border-top: 2px solid #5a1e1e;
+    border-bottom: 2px solid #5a1e1e;
+    position: relative;
+}
+
+.mission-symbol {
+    font-size: 2rem;
+    color: #8b0000;
+    opacity: 0.7;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.mission-statement {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffc0c0;
+    border-left: 5px solid #ff4444;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.doctrine-list {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.doctrine-list li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    border-bottom: 1px dashed #4a1a1a;
+    padding-bottom: 8px;
+}
+
+/* ----- ACCOUNTABILITY PANEL – R-CORP RESPONSIBILITY ----- */
+.accountability-panel {
+    border: 3px solid #5a1e1e;
+    background: #0d0d0d;
+    margin: 50px 0;
+    box-shadow: 10px 10px 0 #2a0000;
+    position: relative;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a0000;
+    padding: 12px 20px;
+    border-bottom: 2px solid #8b0000;
+}
+
+.rcorp-insignia {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ff7777;
+    letter-spacing: 5px;
+}
+
+.authority-stamp {
+    background: black;
+    color: #ff6666;
+    padding: 6px 16px;
+    border: 1px dashed #ff0000;
+    font-weight: 900;
+    transform: rotate(-1deg);
+    font-size: 0.9rem;
+}
+
+.accountability-content {
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.seal-mark {
+    font-size: 5rem;
+    color: #8b0000;
+    opacity: 0.6;
+    flex: 0 0 auto;
+}
+
+.accountability-text {
+    flex: 1;
+}
+
+.accountability-text h3 {
+    color: #ff8888;
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 8px;
+}
+
+.accountability-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background: #0a0a0a;
+    padding: 18px;
+    border-left: 8px solid #8b0000;
+}
+
+.accountability-fact {
+    margin-top: 20px;
+    background: #1e1e1e;
+    padding: 15px;
+    border: 1px solid #6b2b2b;
+    font-weight: 500;
+}
+
+.accountability-footer {
+    background: #1a1a1a;
+    padding: 12px 20px;
+    text-align: right;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    border-top: 1px solid #8b0000;
+    color: #aa8080;
+}
+
+/* ----- SECTION HEADINGS ----- */
+.section-heading {
+    color: #ff7777;
+    border-left: 10px solid #8b0000;
+    padding-left: 18px;
+    margin: 45px 0 25px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+/* ----- AIM GRID – RESPONSIVE ----- */
+.aim-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.aim-item {
+    border: 2px solid #550000;
+    padding: 25px 20px;
+    background: #0f0f0f;
+    box-shadow: 7px 7px 0 #2a0000;
+    position: relative;
+    transition: 0.2s;
+}
+
+.aim-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0 #3a0000;
+    border-color: #8b0000;
+}
+
+.aim-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.aim-item h3 {
+    color: #ffaaaa;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #8b4b4b;
+    padding-bottom: 10px;
+}
+
+/* ----- DEV SECTION – CODE BLOCK EXTENSION ----- */
+.dev-section {
+    margin: 50px 0;
+}
+
+.code-block {
+    background: #030303;
+    border: 1px solid #8b0000;
+    padding: 25px;
+    font-family: 'Courier New', monospace;
+    border-left: 12px solid #ff0000;
+    overflow-x: auto;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.code-prompt {
+    color: #ff8888;
+    font-weight: bold;
+}
+
+.code-comment {
+    color: #77aa77;
+}
+
+.dev-call {
+    background: #121212;
+    padding: 18px;
+    border-left: 5px solid #ff5555;
+    margin-top: 20px;
+}
+
+.dev-badge {
+    display: inline-block;
+    background: #2a0a0a;
+    color: #ffaaaa;
+    padding: 10px 20px;
+    border: 1px solid #ff5555;
+    margin-top: 15px;
+    letter-spacing: 3px;
+}
+
+/* ----- SUPPORT SECTION (SPONSOR/COLLAB) ----- */
+.support-section {
+    margin: 50px 0;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.support-card {
+    background: #111;
+    border: 1px solid #6b2b2b;
+    padding: 25px 20px;
+    box-shadow: 6px 6px 0 #2a1a1a;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-card-header {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ff7777;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #8b0000;
+    padding-bottom: 8px;
+}
+
+.support-button {
+    background: #1e1e1e;
+    color: #ff9999;
+    padding: 12px 16px;
+    text-decoration: none;
+    border: 1px solid #ff0000;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.support-button:hover {
+    background: #8b0000;
+    color: black;
+}
+
+.support-tag {
+    display: inline-block;
+    background: #0a0a0a;
+    border: 1px dashed #aa5555;
+    padding: 6px 14px;
+    margin: 8px 4px;
+    font-size: 0.8rem;
+    color: #ccaaaa;
+}
+
+/* ----- LEGAL DOCTRINE & ACCOUNTABILITY SHORT ----- */
+.legal-doctrine {
+    margin-top: 50px;
+    border-top: 3px double #8b0000;
+    border-bottom: 1px solid #5a1e1e;
+    padding: 25px 0;
+}
+
+.license-line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #aaa;
+    font-size: 0.9rem;
+    padding-bottom: 15px;
+}
+
+.version-tag {
+    color: #a55;
+    font-family: monospace;
+}
+
+.doctrine-short {
+    background: #1a0a0a;
+    padding: 18px;
+    border-left: 8px solid #8b0000;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    color: #ddbbbb;
+}
+
+/* ----- R-CORP SIGNATURE AREA ----- */
+.signature-area {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 45px 0 25px;
+    padding: 20px;
+    background: rgba(20, 0, 0, 0.3);
+    flex-wrap: wrap;
+    border: 1px solid #5a2a2a;
+}
+
+.rcorp-sigil {
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rcorp-logo-image {
+    max-width: 120px;
+    border: 2px solid #8b0000;
+    padding: 8px;
+    background: black;
+}
+
+.sigil-fallback .sigil-fallback-text {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #8b0000;
+}
+
+.signature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.maintainer {
+    font-size: 1.2rem;
+    color: #ffaaaa;
+}
+
+.tagline {
+    color: #aaa;
+    margin: 8px 0;
+}
+
+.doctrine-ref {
+    font-size: 0.8rem;
+    color: #b66;
+    letter-spacing: 2px;
+    border-top: 1px dotted #8b4b4b;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+/* ----- FOOTER FINGERPRINT ----- */
+.fingerprint {
+    font-family: monospace;
+    color: #6b4b4b;
+    font-size: 0.7rem;
+    margin-left: 10px;
+}
+
+/* ----- CSRF TOKEN HIDDEN FIELD ----- */
+#csrf_token {
+    display: none;
+}
+
+/* ----- RESPONSIVE FIXES (mobile map continuity) ----- */
+@media (max-width: 768px) {
+    .manifesto-title {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    .accountability-content {
+        flex-direction: column;
+    }
+
+    .seal-mark {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .panel-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signature-area {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .manifesto-title {
+        font-size: 1.8rem;
+    }
+
+    .manifesto-subheader {
+        font-size: 0.95rem;
+    }
+
+    .rcorp-badge-shield {
+        transform: rotate(0deg);
+        width: 100%;
+    }
+
+    .shield-letter {
+        font-size: 2.2rem;
+    }
+
+    .mission-statement {
+        font-size: 1rem;
+    }
+
+    .accountability-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .legal-doctrine .license-line {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Print styles - secure by default */
+@media print {
+
+    .back-btn,
+    .sponsor-badge,
+    .support-button,
+    .fingerprint {
+        display: none !important;
+    }
+}

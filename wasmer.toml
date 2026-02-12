@@ -1,0 +1,20 @@
+[package]
+name = "decensorweb"
+version = "0.1.0"
+description = "DecensorWeb Platform"
+
+[dependencies]
+"php/php" = "8.3.4"
+
+[[command]]
+name = "run"
+module = "php/php:php"
+runner = "wasi"
+
+[command.annotations.wasi]
+# "-t /app" tells PHP to look in the /app folder for your code
+main-args = ["-t", "/app", "-S", "localhost:8080"]
+
+[fs]
+# This maps your current local directory to the virtual "/app" folder
+"/app" = "."

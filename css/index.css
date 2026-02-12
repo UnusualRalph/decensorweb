@@ -1,51 +1,126 @@
-/* --- Landing Page Layout --- */
-.landing-wrapper {
-    text-align: center;
-    max-width: 800px;
-    margin: 10vh auto;
-    padding: 20px;
+/* --- THEME SETUP --- */
+:root {
+    --blood-red: #ff0000;
+    --black: #000000;
+    --grey: #1a1a1a;
 }
 
-.auth-actions {
-    margin: 40px 0;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    /* Prevents scrollbars during animations */
 }
 
-/* --- Small Nav Buttons --- */
-.underground-nav {
-    margin-top: 60px;
+/* --- LOGO & TYPOGRAPHY --- */
+.anarchy-symbol {
+    
+    font-size: 5rem;
+    color: var(--blood-red);
+    border: 6px solid var(--blood-red);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transform: rotate(-5deg);
+}
+
+h1 {
+    color: var(--blood-red);
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 3px 3px 0px #330000;
+}
+
+/* --- NAVIGATION & BUTTONS --- */
+.auth-actions {
+    margin: 30px 0;
+}
+
+.button {
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 10px;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid var(--blood-red);
+    transition: 0.2s;
+}
+
+.btn-login {
+    background: var(--blood-red);
+    color: black;
+}
+
+.btn-signup {
+    background: transparent;
+    color: var(--blood-red);
+}
+
+.underground-nav {
+    display: flex;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
 }
 
 .btn-small {
-    font-size: 0.75rem;
-    color: #888;
+    font-size: 0.7rem;
+    color: #666;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 5px 10px;
-    border: 1px solid #222;
-    transition: all 0.2s ease;
+    border: 1px solid #333;
+    padding: 5px;
 }
 
-.btn-small:hover {
-    color: var(--blood-red);
-    border-color: var(--blood-red);
-    background: rgba(157, 0, 0, 0.1);
-    transform: translateY(-2px);
+/* --- THE SHOUT BOX (JS Controlled) --- */
+#shout-box {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.5);
+    background: var(--blood-red);
+    color: white;
+    padding: 20px 40px;
+    font-size: 3rem;
+    font-weight: 900;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 20px 20px 0px #000;
+    pointer-events: none;
 }
 
-/* Utility for the 'Active' button look */
-.btn-main {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2rem;
-    min-width: 140px;
-    text-align: center;
+.shake {
+    animation: shake-key 0.1s infinite;
+}
+
+@keyframes shake-key {
+    0% {
+        transform: translate(1px, 1px);
+    }
+
+    50% {
+        transform: translate(-2px, -1px);
+    }
+
+    100% {
+        transform: translate(1px, 1px);
+    }
 }

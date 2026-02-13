@@ -141,8 +141,8 @@ $csrf_token = generateCSRFToken();
                 <span class="doctrine-short">R-CORP · PARENT COMPANY · FULL ACCOUNTABILITY</span>
             </div>
             <div class="footer-nav">
-                <a href="index.html" class="back-btn">← MAIN TERMINAL</a>
-                <a href="navigate.php" class="back-btn">← NAVIGATION HUB</a>
+                <a href="../index.html" class="back-btn">← MAIN TERMINAL</a>
+                <a href="../navigate.php" class="back-btn">← NAVIGATION HUB</a>
             </div>
         </div>
         

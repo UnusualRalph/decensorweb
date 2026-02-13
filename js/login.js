@@ -11,9 +11,10 @@
  * - Accessibility compliance
  * - Security notifications
  * - PGP key reference
+ * - Dual authentication (username + email)
  * 
  * FILE: js/login.js
- * VERSION: 1.0.0
+ * VERSION: 1.1.0
  */
 
 (function () {
@@ -25,7 +26,7 @@
         doctrine: 'R-CORP · WE DO NOT SELL · WE DO NOT LOG · WE DO NOT COMPLY',
         minPasswordLength: 8,
         sessionTimeout: 7200, // 2 hours
-        version: '1.0.0'
+        version: '1.1.0'
     };
 
     // ========== DOM ELEMENTS ==========
@@ -135,6 +136,13 @@
      */
     function isValidUsername(username) {
         return /^[a-zA-Z0-9_]{3,50}$/.test(username);
+    }
+
+    /**
+     * Check if input is email or username
+     */
+    function isEmail(input) {
+        return isValidEmail(input);
     }
 
     /**
@@ -259,7 +267,7 @@
 
                 // Validate based on form type
                 if (isLogin) {
-                    // Login validation
+                    // Login validation - SUPPORTS BOTH USERNAME AND EMAIL
                     const login = elements.loginInput?.value.trim();
                     const password = elements.passwordInput?.value;
 
@@ -268,7 +276,23 @@
                         errors.push('Username or email required');
                         if (elements.loginInput) elements.loginInput.style.borderColor = '#ff5555';
                     } else {
-                        if (elements.loginInput) elements.loginInput.style.borderColor = '';
+                        // Check if it's a valid username OR email
+                        if (!isValidUsername(login) && !isValidEmail(login)) {
+                            isValid = false;
+                            errors.push('Please enter a valid username (letters/numbers/underscores) or email address');
+                            if (elements.loginInput) elements.loginInput.style.borderColor = '#ff5555';
+                        } else {
+                            if (elements.loginInput) elements.loginInput.style.borderColor = '';
+
+                            // Add helpful hint about what format was detected
+                            if (isValidEmail(login)) {
+                                // It's an email - all good
+                                if (CONFIG.debug) console.log('[LOGIN] Email format detected');
+                            } else {
+                                // It's a username - all good
+                                if (CONFIG.debug) console.log('[LOGIN] Username format detected');
+                            }
+                        }
                     }
 
                     if (!password) {
@@ -285,7 +309,7 @@
                 }
 
                 if (isRegister) {
-                    // Registration validation
+                    // Registration validation - REQUIRE BOTH USERNAME AND EMAIL
                     const username = elements.usernameInput?.value.trim();
                     const email = elements.emailInput?.value.trim();
                     const password = elements.passwordInput?.value;
@@ -379,8 +403,48 @@
                         submitBtn.disabled = true;
                         submitBtn.innerHTML = '⚡ PROCESSING ⚡';
                     }
+
+                    // For login form, add a hidden field to indicate what type of login was used
+                    if (isLogin && elements.loginInput) {
+                        const loginValue = elements.loginInput.value.trim();
+
+                        // Check if there's already a hidden field for login_type
+                        let loginTypeField = form.querySelector('input[name="login_type"]');
+                        if (!loginTypeField) {
+                            loginTypeField = document.createElement('input');
+                            loginTypeField.type = 'hidden';
+                            loginTypeField.name = 'login_type';
+                            form.appendChild(loginTypeField);
+                        }
+
+                        // Set the login type based on the input format
+                        if (isValidEmail(loginValue)) {
+                            loginTypeField.value = 'email';
+                        } else {
+                            loginTypeField.value = 'username';
+                        }
+                    }
                 }
             });
+
+            // Add real-time validation for login field to give feedback
+            if (isLogin && elements.loginInput) {
+                elements.loginInput.addEventListener('input', function () {
+                    const value = this.value.trim();
+
+                    // Reset border
+                    this.style.borderColor = '';
+
+                    // Only show hint if there's enough text
+                    if (value.length > 2) {
+                        if (isValidEmail(value)) {
+                            this.style.borderColor = '#55ff55'; // Green for email
+                        } else if (isValidUsername(value)) {
+                            this.style.borderColor = '#55aaff'; // Blue for username
+                        }
+                    }
+                });
+            }
         });
     }
 
@@ -549,7 +613,7 @@
 
             // Final security notice
             console.log(
-                '%c🔒 R-CORP SECURE AUTH: Client-side validation active · No tracking · No logging · PGP ready 🔒',
+                '%c🔒 R-CORP SECURE AUTH: Client-side validation active · No tracking · No logging · PGP ready · Dual auth (username/email) 🔒',
                 'color: #aaffaa; background: #0a1a0a; font-size: 10px; font-family: monospace; padding: 4px; border: 1px solid #00aa00;'
             );
 

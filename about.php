@@ -208,7 +208,7 @@ $rcorp_doctrine = 'All accounts, identities, and data channels are governed unde
 $mission_core = 'We do not negotiate with censors. We do not remove political dissent. We do not comply with government takedown requests. decensorweb exists as a permanent, unassailable alternative to the compromised platforms.';
 
 // Secure fingerprinting - don't expose user agent directly, use hash
-$user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'R_CORP_ANARCHY';
+$user_agent = $_SERVER['HTTP_USER_AGENT'] ?? 'R_CORP';
 $fingerprint = hash_hmac('sha256', $user_agent, 'R_CORP_SECURE_SALT_LONG_STRING');
 
 // Validate assets before including

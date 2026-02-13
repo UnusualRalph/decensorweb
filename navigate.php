@@ -219,7 +219,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                 <span class="project-tag"><?php echo e($config['project']); ?></span>
                 <span class="status-badge">SYSTEM: <?php echo e($system_status['state']); ?></span>
                 <span class="security-badge">SECURITY: <?php echo e($system_status['security']); ?></span>
-                <span class="nodes-badge">NODES: <?php echo e($system_status['nodes']); ?></span>
+                <span class="nodes-badge">NODES: <?php echo e((string)$system_status['nodes']); ?></span>
             </div>
         </div>
 
@@ -345,7 +345,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
             </div>
         </div>
 
-        <!-- ========== SYSTEM STATUS PANEL ========== -->
+        <!-- ========== STATUS PANEL ========== -->
         <div class="status-panel">
             <div class="status-panel-header">
                 <span class="panel-icon">🔐</span>
@@ -372,7 +372,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                 </div>
                 <div class="status-item">
                     <span class="status-label">ACTIVE NODES</span>
-                    <span class="status-value"><?php echo e($system_status['nodes']); ?> · ALL OPERATIONAL</span>
+                    <span class="status-value"><?php echo e((string)$system_status['nodes']); ?> · ALL OPERATIONAL</span>
                 </div>
                 <div class="status-item">
                     <span class="status-label">CONTACT CHANNEL</span>
@@ -390,7 +390,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
             
             <div class="status-footer">
                 <span class="doctrine-declaration">
-                    ⚔️ R-CORP ASSUMES FULL ACCOUNTABILITY FOR ALL ACCESS POINTS · 5 ACTIVE NODES ⚔️
+                    ⚔️ R-CORP ASSUMES FULL ACCOUNTABILITY FOR ALL ACCESS POINTS · <?php echo e((string)$system_status['nodes']); ?> ACTIVE NODES ⚔️
                 </span>
             </div>
         </div>
@@ -452,12 +452,12 @@ $short_fingerprint = substr($fingerprint, 0, 8);
             </div>
         </div>
 
-        <!-- ========== ACCOUNTABILITY DECLARATION ========== -->
+        <!-- ========== ACCOUNTABILITY BANNER ========== -->
         <div class="accountability-banner">
             <div class="banner-content">
                 <span class="banner-icon">⛧</span>
                 <span class="banner-text">
-                    R-CORP · PARENT COMPANY · FULL ACCOUNTABILITY FOR ALL 5 SYSTEM NODES
+                    R-CORP · PARENT COMPANY · FULL ACCOUNTABILITY FOR ALL <?php echo e((string)$system_status['nodes']); ?> SYSTEM NODES
                 </span>
                 <span class="banner-icon">⛧</span>
             </div>
@@ -467,20 +467,20 @@ $short_fingerprint = substr($fingerprint, 0, 8);
         <div class="nav-footer">
             <div class="footer-doctrine">
                 <span class="doctrine-short">
-                    <strong>ACCOUNTABILITY:</strong> R-CORP · PARENT COMPANY · FULL RESPONSIBILITY · 5 ACTIVE NODES
+                    <strong>ACCOUNTABILITY:</strong> R-CORP · PARENT COMPANY · FULL RESPONSIBILITY · <?php echo e((string)$system_status['nodes']); ?> ACTIVE NODES
                 </span>
             </div>
             <div class="footer-coordinates">
                 <span class="coordinate">DECENSOR · SECTOR 7</span>
                 <span class="nav-indicator">[NAVIGATION HUB · v<?php echo e($config['version']); ?>]</span>
                 <span class="version-tag"><?php echo e($config['build']); ?></span>
-                <span class="node-count">5/5 NODES ONLINE</span>
+                <span class="node-count"><?php echo e((string)$system_status['nodes']); ?>/<?php echo e((string)$system_status['nodes']); ?> NODES ONLINE</span>
                 <span class="fingerprint">[<?php echo e($short_fingerprint); ?>]</span>
             </div>
         </div>
 
         <!-- SECURE BUILD TIMESTAMP (COMMENT ONLY) -->
-        <!-- BUILD: <?php echo e(date('Y-m-d H:i:s')); ?> · NONCE: <?php echo e(substr($csp_nonce, 0, 8)); ?> · NODES: 5/5 · R-CORP AUDIT PASSED · NAVIGATION COMPLETE -->
+        <!-- BUILD: <?php echo e(date('Y-m-d H:i:s')); ?> · NONCE: <?php echo e(substr($csp_nonce, 0, 8)); ?> · NODES: <?php echo e((string)$system_status['nodes']); ?>/5 · R-CORP AUDIT PASSED · NAVIGATION COMPLETE -->
     </div>
 
     <!-- JAVASCRIPT · EXTERNAL · SRI PROTECTED · NONCE ENFORCED -->

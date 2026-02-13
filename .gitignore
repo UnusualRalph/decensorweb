@@ -1,2 +1,5 @@
 #DATABASE CREDENTIALS
 config.php
+security.php
+database.php
+auth.php

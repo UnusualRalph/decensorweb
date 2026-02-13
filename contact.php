@@ -350,7 +350,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                 <div class="github-stats">
                     <div class="stat-item">
                         <span class="stat-label">REPOSITORY:</span>
-                        <span class="stat-value">decensorweb · PUBLIC</span>
+                        <span class="stat-value">decensorweb · PRIVATE</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">CONTRIBUTIONS:</span>

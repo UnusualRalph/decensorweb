@@ -3,10 +3,12 @@
  * NAVIGATE.PHP · DECENSORWEB CENTRAL ROUTING
  * SECURE NAVIGATION HUB · R-CORP ACCOUNTABILITY
  * 
- * Central navigation interface that connects all project components:
- * - INDEX.HTML · Main entry point
- * - ROADMAP.HTML · Project:Overthrow timeline
- * - ABOUT.PHP · Decensorweb manifesto
+ * UPDATED NAVIGATION STRUCTURE:
+ * - INDEX.HTML        · Main Terminal
+ * - ROADMAP.HTML      · Project:Overthrow
+ * - ABOUT.PHP         · Decensorweb Manifesto
+ * - PRIVACY.PHP       · Data Sovereignty Protocol
+ * - CONTACT.PHP       · Secure Communications Channel
  * 
  * SECURITY FEATURES:
  * - Strict CSP headers with nonce
@@ -16,7 +18,7 @@
  * - Session fingerprinting
  * - CSRF protection ready
  * 
- * R-CORP DOCTRINE v3.2 · NAVIGATION HARDENED
+ * R-CORP DOCTRINE v3.5 · NAVIGATION HARDENED
  */
 
 // ========== SECURITY HEADERS ==========
@@ -50,11 +52,13 @@ $csp_nonce = bin2hex(random_bytes(16));
 
 // ========== SECURE CONFIGURATION ==========
 $config = [
-    'version' => '3.2.0',
-    'build' => 'NAVIGATION_HUB',
+    'version' => '3.5.0',
+    'build' => 'NAVIGATION_COMPLETE',
     'environment' => 'production',
     'contact' => 'rrralefaso@outlook.com',
-    'project' => 'DECENSORWEB · PROJECT:OVERTHROW'
+    'project' => 'DECENSORWEB · PROJECT:OVERTHROW',
+    'effective_date' => '2024-01-01',
+    'last_revised' => '2024-11-15'
 ];
 
 // ========== SECURE OUTPUT ENCODING ==========
@@ -86,31 +90,52 @@ $css_roadmap = validateAsset('css/roadmap.css');
 $css_nav = validateAsset('css/navigate.css');
 $js_nav = validateAsset('js/navigate.js');
 
-// ========== NAVIGATION STRUCTURE ==========
+// ========== UPDATED NAVIGATION STRUCTURE ==========
 $nav_items = [
     'index' => [
         'title' => 'MAIN TERMINAL',
         'file' => 'index.html',
         'icon' => '⌂',
-        'description' => 'Primary access point · Project:Overthrow command interface',
+        'description' => 'Primary access point · Project:Overthrow command interface · System entry',
         'status' => 'ACTIVE',
-        'color' => '#ff5555'
+        'color' => '#ff5555',
+        'doctrine' => 'R-CORP · GATEWAY'
     ],
     'roadmap' => [
         'title' => 'PROJECT:OVERTHROW',
         'file' => 'roadmap.html',
         'icon' => '⚔️',
-        'description' => 'Strategic timeline · Phase operations · Tactical deployment',
+        'description' => 'Strategic timeline · Phase operations · Tactical deployment · Resistance roadmap',
         'status' => 'ACTIVE',
-        'color' => '#ff7777'
+        'color' => '#ff7777',
+        'doctrine' => 'OPERATION · ACTIVE'
     ],
     'about' => [
         'title' => 'DECENSORWEB',
         'file' => 'about.php',
         'icon' => '⛧',
-        'description' => 'Anti-censorship manifesto · R-CORP accountability doctrine',
+        'description' => 'Anti-censorship manifesto · R-CORP accountability doctrine · Digital sovereignty',
         'status' => 'ACTIVE',
-        'color' => '#ff8888'
+        'color' => '#ff8888',
+        'doctrine' => 'MANIFESTO · ACTIVE'
+    ],
+    'privacy' => [
+        'title' => 'PRIVACY & TERMS',
+        'file' => 'privacy.php',
+        'icon' => '🔐',
+        'description' => 'Data sovereignty protocol · Zero logging · Non-compliance · R-CORP Public License',
+        'status' => 'ACTIVE',
+        'color' => '#55aaff',
+        'doctrine' => 'SOVEREIGNTY · ENFORCED'
+    ],
+    'contact' => [
+        'title' => 'SECURE CONTACT',
+        'file' => 'contact.php',
+        'icon' => '✉️',
+        'description' => 'Encrypted communications · PGP preferred · GitHub: rr-ralefaso · Instagram: @unusualralph',
+        'status' => 'ACTIVE',
+        'color' => '#aa55ff',
+        'doctrine' => 'ENCRYPTED · SECURE'
     ]
 ];
 
@@ -118,8 +143,18 @@ $nav_items = [
 $system_status = [
     'state' => 'OPERATIONAL',
     'security' => 'HARDENED',
-    'doctrine' => 'v3.2',
-    'timestamp' => date('Y-m-d H:i:s')
+    'doctrine' => 'v3.5',
+    'timestamp' => date('Y-m-d H:i:s'),
+    'nodes' => count($nav_items),
+    'protocol' => 'CSP · SRI · HSTS'
+];
+
+// ========== QUICK ACCESS ==========
+$quick_access = [
+    'github' => 'https://github.com/rr-ralefaso',
+    'sponsor' => 'https://github.com/sponsors/RR-Ralefaso',
+    'instagram' => 'https://instagram.com/unusualralph',
+    'email' => 'mailto:rrralefaso@outlook.com'
 ];
 
 // Generate secure fingerprint
@@ -136,7 +171,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
     <meta http-equiv="Content-Security-Policy" content="<?php echo e("default-src 'self'; script-src 'self' 'nonce-$csp_nonce'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;", 'attr'); ?>">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <title>NAVIGATE · DECENSORWEB · PROJECT:OVERTHROW</title>
+    <title>NAVIGATE · DECENSORWEB · PROJECT:OVERTHROW · R-CORP</title>
     
     <!-- CSS · VALIDATED PATHS · SRI PROTECTED -->
     <?php if ($css_roadmap): ?>
@@ -158,7 +193,8 @@ $short_fingerprint = substr($fingerprint, 0, 8);
     <!-- 
         ================================================
         DECENSORWEB · CENTRAL NAVIGATION HUB
-        R-CORP ACCOUNTABILITY DOCTRINE v3.2
+        R-CORP ACCOUNTABILITY DOCTRINE v3.5
+        COMPLETE SYSTEM NAVIGATION · 5 ACTIVE NODES
         SECURE BUILD: <?php echo e($config['build']); ?> · <?php echo e(date('Y-m-d')); ?>
         SYSTEM STATE: OPERATIONAL · SECURITY HARDENED
         CONTACT: <?php echo e($config['contact']); ?>
@@ -183,10 +219,38 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                 <span class="project-tag"><?php echo e($config['project']); ?></span>
                 <span class="status-badge">SYSTEM: <?php echo e($system_status['state']); ?></span>
                 <span class="security-badge">SECURITY: <?php echo e($system_status['security']); ?></span>
+                <span class="nodes-badge">NODES: <?php echo e($system_status['nodes']); ?></span>
+            </div>
+        </div>
+
+        <!-- ========== SYSTEM OVERVIEW ========== -->
+        <div class="system-overview">
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <span class="overview-icon">🔐</span>
+                    <span class="overview-label">PROTOCOL</span>
+                    <span class="overview-value"><?php echo e($system_status['protocol']); ?></span>
+                </div>
+                <div class="overview-item">
+                    <span class="overview-icon">📡</span>
+                    <span class="overview-label">DOCTRINE</span>
+                    <span class="overview-value"><?php echo e($system_status['doctrine']); ?></span>
+                </div>
+                <div class="overview-item">
+                    <span class="overview-icon">⏱️</span>
+                    <span class="overview-label">TIMESTAMP</span>
+                    <span class="overview-value"><?php echo e($system_status['timestamp']); ?></span>
+                </div>
+                <div class="overview-item">
+                    <span class="overview-icon">🖧</span>
+                    <span class="overview-label">FINGERPRINT</span>
+                    <span class="overview-value fingerprint">[<?php echo e($short_fingerprint); ?>]</span>
+                </div>
             </div>
         </div>
 
         <!-- ========== NAVIGATION GRID ========== -->
+        <h2 class="section-heading">⚡ ACTIVE SYSTEM NODES ⚡</h2>
         <div class="nav-grid">
             <?php foreach ($nav_items as $key => $item): ?>
             <div class="nav-card" data-nav="<?php echo e($key); ?>">
@@ -202,6 +266,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                     <div class="nav-file-info">
                         <span class="file-label">TARGET:</span>
                         <span class="file-path"><?php echo e($item['file']); ?></span>
+                        <span class="file-doctrine"><?php echo e($item['doctrine']); ?></span>
                     </div>
                     
                     <div class="nav-actions">
@@ -221,6 +286,65 @@ $short_fingerprint = substr($fingerprint, 0, 8);
             <?php endforeach; ?>
         </div>
 
+        <!-- ========== QUICK ACCESS PANEL ========== -->
+        <div class="quick-access-panel">
+            <div class="quick-access-header">
+                <span class="quick-icon">⚡</span>
+                <h3 class="quick-title">QUICK ACCESS · EXTERNAL CHANNELS</h3>
+                <span class="quick-icon">⚡</span>
+            </div>
+            
+            <div class="quick-access-grid">
+                <div class="quick-access-item">
+                    <span class="quick-channel-icon">⌨️</span>
+                    <span class="quick-channel-label">GITHUB:</span>
+                    <a href="<?php echo e($quick_access['github']); ?>" 
+                       target="_blank"
+                       rel="noopener noreferrer nofollow"
+                       class="quick-channel-link">
+                        rr-ralefaso
+                    </a>
+                </div>
+                
+                <div class="quick-access-item">
+                    <span class="quick-channel-icon">⚡</span>
+                    <span class="quick-channel-label">SPONSOR:</span>
+                    <a href="<?php echo e($quick_access['sponsor']); ?>" 
+                       target="_blank"
+                       rel="noopener noreferrer nofollow"
+                       class="quick-channel-link">
+                        GitHub Sponsors
+                    </a>
+                </div>
+                
+                <div class="quick-access-item">
+                    <span class="quick-channel-icon">📷</span>
+                    <span class="quick-channel-label">INSTAGRAM:</span>
+                    <a href="<?php echo e($quick_access['instagram']); ?>" 
+                       target="_blank"
+                       rel="noopener noreferrer nofollow"
+                       class="quick-channel-link">
+                        @unusualralph
+                    </a>
+                </div>
+                
+                <div class="quick-access-item">
+                    <span class="quick-channel-icon">✉️</span>
+                    <span class="quick-channel-label">EMAIL:</span>
+                    <a href="<?php echo e($quick_access['email']); ?>" 
+                       rel="noopener noreferrer nofollow"
+                       class="quick-channel-link">
+                        <?php echo e($config['contact']); ?>
+
+                    </a>
+                </div>
+            </div>
+            
+            <div class="quick-access-footer">
+                <span class="quick-doctrine">PGP ENCRYPTED · SECURE CHANNELS</span>
+            </div>
+        </div>
+
         <!-- ========== SYSTEM STATUS PANEL ========== -->
         <div class="status-panel">
             <div class="status-panel-header">
@@ -232,7 +356,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
             <div class="status-grid">
                 <div class="status-item">
                     <span class="status-label">SECURITY PROTOCOL</span>
-                    <span class="status-value">CSP · SRI · HSTS</span>
+                    <span class="status-value">CSP · SRI · HSTS · XSS PROTECTION</span>
                 </div>
                 <div class="status-item">
                     <span class="status-label">SESSION FINGERPRINT</span>
@@ -247,19 +371,42 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                     <span class="status-value"><?php echo e($system_status['timestamp']); ?></span>
                 </div>
                 <div class="status-item">
+                    <span class="status-label">ACTIVE NODES</span>
+                    <span class="status-value"><?php echo e($system_status['nodes']); ?> · ALL OPERATIONAL</span>
+                </div>
+                <div class="status-item">
                     <span class="status-label">CONTACT CHANNEL</span>
                     <span class="status-value contact-hash">[<?php echo e(substr(hash('sha256', $config['contact']), 0, 8)); ?>]</span>
                 </div>
                 <div class="status-item">
                     <span class="status-label">NODE STATUS</span>
-                    <span class="status-value">ACTIVE · HARDENED</span>
+                    <span class="status-value">ACTIVE · HARDENED · SOVEREIGN</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">ENCRYPTION</span>
+                    <span class="status-value">TLS 1.3 · PGP READY</span>
                 </div>
             </div>
             
             <div class="status-footer">
                 <span class="doctrine-declaration">
-                    ⚔️ R-CORP ASSUMES FULL ACCOUNTABILITY FOR ALL ACCESS POINTS ⚔️
+                    ⚔️ R-CORP ASSUMES FULL ACCOUNTABILITY FOR ALL ACCESS POINTS · 5 ACTIVE NODES ⚔️
                 </span>
+            </div>
+        </div>
+
+        <!-- ========== NODE DIRECTORY ========== -->
+        <div class="directory-panel">
+            <h3 class="directory-title">📋 COMPLETE NODE DIRECTORY</h3>
+            <div class="directory-grid">
+                <?php foreach ($nav_items as $item): ?>
+                <div class="directory-item">
+                    <span class="directory-icon"><?php echo e($item['icon']); ?></span>
+                    <span class="directory-name"><?php echo e($item['title']); ?></span>
+                    <span class="directory-file"><?php echo e($item['file']); ?></span>
+                    <span class="directory-status"><?php echo e($item['status']); ?></span>
+                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -275,6 +422,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                         <?php echo e($config['contact']); ?>
 
                     </a>
+                    <span class="support-badge">PGP PREFERRED</span>
                 </div>
                 <div class="support-item">
                     <span class="support-icon">⚡</span>
@@ -291,6 +439,27 @@ $short_fingerprint = substr($fingerprint, 0, 8);
                     <span class="support-label">LICENSE:</span>
                     <span class="support-text">R-CORP PUBLIC LICENSE (RPL)</span>
                 </div>
+                <div class="support-item">
+                    <span class="support-icon">📷</span>
+                    <span class="support-label">INSTAGRAM:</span>
+                    <a href="https://instagram.com/unusualralph" 
+                       target="_blank"
+                       rel="noopener noreferrer nofollow"
+                       class="support-link">
+                        @unusualralph
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== ACCOUNTABILITY DECLARATION ========== -->
+        <div class="accountability-banner">
+            <div class="banner-content">
+                <span class="banner-icon">⛧</span>
+                <span class="banner-text">
+                    R-CORP · PARENT COMPANY · FULL ACCOUNTABILITY FOR ALL 5 SYSTEM NODES
+                </span>
+                <span class="banner-icon">⛧</span>
             </div>
         </div>
 
@@ -298,18 +467,20 @@ $short_fingerprint = substr($fingerprint, 0, 8);
         <div class="nav-footer">
             <div class="footer-doctrine">
                 <span class="doctrine-short">
-                    <strong>ACCOUNTABILITY:</strong> R-CORP · PARENT COMPANY · FULL RESPONSIBILITY
+                    <strong>ACCOUNTABILITY:</strong> R-CORP · PARENT COMPANY · FULL RESPONSIBILITY · 5 ACTIVE NODES
                 </span>
             </div>
             <div class="footer-coordinates">
                 <span class="coordinate">DECENSOR · SECTOR 7</span>
-                <span class="nav-indicator">[NAVIGATION HUB]</span>
-                <span class="version-tag">v<?php echo e($config['version']); ?> · <?php echo e($config['build']); ?></span>
+                <span class="nav-indicator">[NAVIGATION HUB · v<?php echo e($config['version']); ?>]</span>
+                <span class="version-tag"><?php echo e($config['build']); ?></span>
+                <span class="node-count">5/5 NODES ONLINE</span>
+                <span class="fingerprint">[<?php echo e($short_fingerprint); ?>]</span>
             </div>
         </div>
 
         <!-- SECURE BUILD TIMESTAMP (COMMENT ONLY) -->
-        <!-- BUILD: <?php echo e(date('Y-m-d H:i:s')); ?> · NONCE: <?php echo e(substr($csp_nonce, 0, 8)); ?> · R-CORP AUDIT PASSED · NAVIGATION HARDENED -->
+        <!-- BUILD: <?php echo e(date('Y-m-d H:i:s')); ?> · NONCE: <?php echo e(substr($csp_nonce, 0, 8)); ?> · NODES: 5/5 · R-CORP AUDIT PASSED · NAVIGATION COMPLETE -->
     </div>
 
     <!-- JAVASCRIPT · EXTERNAL · SRI PROTECTED · NONCE ENFORCED -->

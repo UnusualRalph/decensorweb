@@ -58,8 +58,8 @@ $csrf_token = generateCSRFToken();
     <title>LOGIN · DECENSORWEB · R-CORP</title>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/roadmap.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/roadmap.css">
+    <link rel="stylesheet" href="../css/login.css">
     
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000000'/><text x='20' y='70' font-size='70' fill='%23ff0000'>⛧</text></svg>">
@@ -153,6 +153,6 @@ $csrf_token = generateCSRFToken();
     </div>
     
     <!-- JavaScript -->
-    <script src="js/login.js" defer></script>
+    <script src="../js/login.js" defer></script>
 </body>
 </html>

@@ -449,6 +449,7 @@ $build_time = safeEncode(date('Y-m-d H:i:s'));
         <!-- ========== FOOTER NAVIGATION ========== -->
         <div class="footer-nav">
             <a href="roadmap.html" class="back-btn" rel="noopener noreferrer">← PROJECT:OVERTHROW ROADMAP</a>
+            
             <div class="map-coordinates">
                 <span class="coordinate">DECENSOR · SECTOR 7</span>
                 <span class="fingerprint" aria-label="Secure session fingerprint">[<?php echo safeEncode(substr($fingerprint, 0, 8)); ?>]</span>

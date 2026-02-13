@@ -6,9 +6,9 @@
 
 define('SECURE_ACCESS', true);
 session_start();
-require_once 'config.php';
-require_once 'security.php';
-require_once 'auth.php';
+require 'config.php';
+require 'security.php';
+require 'auth.php';
 
 if (Auth::isLoggedIn()) {
     header('Location: dashboard.php');

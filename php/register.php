@@ -88,14 +88,14 @@ $csrf_token = generateCSRFToken();
             <?php endif; ?>
             
             <div class="form-group">
-                <label for="username" class="form-label">USERNAME</label>
+                <label for="username" class="form-label" required>USERNAME</label>
                 <input type="text" id="username" name="username" class="form-input" 
                        value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"
                        required minlength="3" maxlength="50" autofocus>
             </div>
             
             <div class="form-group">
-                <label for="email" class="form-label">EMAIL ADDRESS</label>
+                <label for="email" class="form-label" type="email" required>EMAIL ADDRESS</label>
                 <input type="email" id="email" name="email" class="form-input"
                        value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
                        required>

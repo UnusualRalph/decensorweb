@@ -11,9 +11,9 @@ define('SECURE_ACCESS', true);
 session_start();
 
 // Load configuration
-require 'config.php';
-require 'security.php';
-require 'auth.php';
+require_once 'config.php';
+require_once 'security.php';
+require_once 'auth.php';
 
 // Redirect if already logged in
 if (Auth::isLoggedIn()) {

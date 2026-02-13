@@ -3,58 +3,292 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>PROJECT:OVERTHROW · ROADMAP</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>PROJECT:OVERTHROW · ROADMAP · COMPLETE</title>
+
+    <!-- PRIMARY STYLESHEET -->
     <link rel="stylesheet" href="css/roadmap.css">
+
+    <!-- THEME SWITCHER · EXTERNAL · DEFERRED -->
+    <script src="js/theme.js" defer></script>
+
+    <!-- FALLBACK FAVICON -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000000'/><text x='20' y='70' font-size='70' fill='%23ff0000'>⛧</text></svg>">
 </head>
 
 <body>
     <div class="roadmap-container">
-        <!-- tactical map corner accents -->
+        <!-- TACTICAL MAP CORNER ACCENTS -->
         <div class="map-corner top-left"></div>
         <div class="map-corner top-right"></div>
         <div class="map-corner bottom-left"></div>
         <div class="map-corner bottom-right"></div>
 
-        <h1>PROJECT:OVERTHROW</h1>
+        <!-- ========== THEME CONTROLS ========== -->
+        <div class="theme-controls">
+            <button class="theme-btn" data-theme="blood" aria-label="Blood theme (default)">🔴 BLOOD</button>
+            <button class="theme-btn" data-theme="midnight" aria-label="Midnight covert theme">🌑 MIDNIGHT</button>
+            <button class="theme-btn" data-theme="forest" aria-label="Forest resistance theme">🌲 FOREST</button>
+            <button class="theme-btn" data-theme="amber" aria-label="Amber tactical theme">🟠 AMBER</button>
+        </div>
 
-        <!-- PHASE 01 – SETUP -->
+        <!-- ========== HEADER WITH PROGRESS ========== -->
+        <div class="header-with-metrics">
+            <h1>PROJECT:OVERTHROW</h1>
+            <div class="progress-compact">
+                <span class="progress-label">COMPLETION:</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 42%;"></div>
+                </div>
+                <span class="progress-percent">42%</span>
+            </div>
+        </div>
+
+        <!-- ========== PHASE 01 – FOUNDATION ========== -->
         <div class="phase">
-            <div class="phase-header">Phase 01: Setup</div>
+            <div class="phase-header">
+                <span class="phase-number">01</span>
+                <span class="phase-title">FOUNDATION & SECURITY</span>
+                <span class="phase-status">3/6 COMPLETE</span>
+            </div>
             <ul>
-                <li class="completed">Release index interface</li>
-                <li class="">create an About</li>
-                <li class="">Inject anarchy protocols</li> <!--change class to Completed-->
-                <li class="">Secure PHP gateway</li>
+                <li class="completed">Release index interface (Main terminal)</li>
+                <li class="completed">Create about.php (Decensorweb manifesto)</li>
+                <li class="completed">Inject anarchy protocols (R-CORP doctrine)</li>
+                <li class="completed">Secure PHP gateway (CSP · SRI · hardening)</li>
+                <li>Create privacy.php (Data sovereignty + terms)</li>
+                <li>Create contact.php (Secure channels · PGP)</li>
             </ul>
         </div>
 
-        <!-- PHASE 02 – EXPANSION -->
+        <!-- ========== PHASE 02 – IDENTITY & NAVIGATION ========== -->
         <div class="phase">
-            <div class="phase-header">Phase 02: Expansion</div>
+            <div class="phase-header">
+                <span class="phase-number">02</span>
+                <span class="phase-title">IDENTITY & NAVIGATION</span>
+                <span class="phase-status">2/5 COMPLETE</span>
+            </div>
             <ul>
-                <li class="">Deploy community forums</li>
-                <li class="">Encrypted file sharing</li>
+                <li class="completed">Design R-CORP accountability badges</li>
+                <li class="completed">Create navigate.php (Central routing hub)</li>
+                <li>Implement unified navigation header (all pages)</li>
+                <li>Add breadcrumb system with doctrine markers</li>
+                <li>Deploy 404/censorship resistance page</li>
             </ul>
         </div>
 
-        <!-- PHASE 03 – ARMAMENT -->
+        <!-- ========== PHASE 03 – USER SYSTEMS ========== -->
         <div class="phase">
-            <div class="phase-header">Phase 03: Armament</div>
+            <div class="phase-header">
+                <span class="phase-number">03</span>
+                <span class="phase-title">USER SYSTEMS & AUTH</span>
+                <span class="phase-status">0/8 COMPLETE</span>
+            </div>
             <ul>
-                <li>Distribute offline mesh kits</li>
-                <li>Activate darknet relays</li>
-                <li>Encrypted signal bridge</li>
-                <li>Field test encryption</li>
+                <li>Design encrypted account creation (R-CORP issued)</li>
+                <li>Implement zero-knowledge authentication</li>
+                <li>Build session management with CSP nonces</li>
+                <li>Create account dashboard (sovereignty panel)</li>
+                <li>Deploy PGP key management for users</li>
+                <li>Add 2FA enforcement (TOTP)</li>
+                <li>Build account deletion with permanent wipe</li>
+                <li>Implement rate limiting & brute force protection</li>
             </ul>
         </div>
 
-        <!-- map legend / navigation -->
+        <!-- ========== PHASE 04 – SOCIAL ENGINE ========== -->
+        <div class="phase">
+            <div class="phase-header">
+                <span class="phase-number">04</span>
+                <span class="phase-title">SOCIAL ENGINE · FORUMS</span>
+                <span class="phase-status">0/9 COMPLETE</span>
+            </div>
+            <ul>
+                <li>Deploy community forums (encrypted threads)</li>
+                <li>Implement end-to-end encrypted private messaging</li>
+                <li>Build content creation with markdown support</li>
+                <li>Create voting/karma system (non-manipulable)</li>
+                <li>Add moderation tools (hate speech only)</li>
+                <li>Implement user blocking & muting</li>
+                <li>Build search with zero-logging</li>
+                <li>Add file attachments (encrypted, virus scanned)</li>
+                <li>Deploy real-time notifications (WebSocket)</li>
+            </ul>
+        </div>
+
+        <!-- ========== PHASE 05 – ENCRYPTED SHARING ========== -->
+        <div class="phase">
+            <div class="phase-header">
+                <span class="phase-number">05</span>
+                <span class="phase-title">ENCRYPTED FILE SHARING</span>
+                <span class="phase-status">0/6 COMPLETE</span>
+            </div>
+            <ul>
+                <li>Build client-side encryption for uploads</li>
+                <li>Implement secure file storage (zero-knowledge)</li>
+                <li>Create expiring share links</li>
+                <li>Add virus scanning with ClamAV</li>
+                <li>Implement file versioning with encryption</li>
+                <li>Build file management dashboard</li>
+            </ul>
+        </div>
+
+        <!-- ========== PHASE 06 – DECENTRALIZATION ========== -->
+        <div class="phase">
+            <div class="phase-header">
+                <span class="phase-number">06</span>
+                <span class="phase-title">DECENTRALIZATION · MESH</span>
+                <span class="phase-status">0/5 COMPLETE</span>
+            </div>
+            <ul>
+                <li>Distribute offline mesh kits documentation</li>
+                <li>Activate darknet relay nodes</li>
+                <li>Implement ActivityPub federation</li>
+                <li>Build peer-to-peer message propagation</li>
+                <li>Create decentralized identity bridging</li>
+            </ul>
+        </div>
+
+        <!-- ========== PHASE 07 – MOBILE & UX ========== -->
+        <div class="phase">
+            <div class="phase-header">
+                <span class="phase-number">07</span>
+                <span class="phase-title">MOBILE & PROGRESSIVE WEB</span>
+                <span class="phase-status">0/6 COMPLETE</span>
+            </div>
+            <ul>
+                <li>Build PWA with offline support</li>
+                <li>Implement push notifications (encrypted)</li>
+                <li>Add biometric authentication for mobile</li>
+                <li>Create mobile-responsive navigation drawer</li>
+                <li>Deploy touch-optimized UI components</li>
+                <li>Add install prompt with custom splash</li>
+            </ul>
+        </div>
+
+        <!-- ========== PHASE 08 – LAUNCH & RESISTANCE ========== -->
+        <div class="phase">
+            <div class="phase-header">
+                <span class="phase-number">08</span>
+                <span class="phase-title">LAUNCH & RESISTANCE</span>
+                <span class="phase-status">0/4 COMPLETE</span>
+            </div>
+            <ul>
+                <li>Security audit by third-party researchers</li>
+                <li>Public bug bounty program launch</li>
+                <li>Deploy warrant canary automation</li>
+                <li>Official launch · Sovereign network status</li>
+            </ul>
+        </div>
+
+        <!-- ========== COMPLETE DEVELOPMENT TRACKER ========== -->
+        <div class="tracker-panel">
+            <div class="tracker-header">
+                <span class="tracker-icon">📋</span>
+                <h3 class="tracker-title">PLATFORM COMPLETION TRACKER</h3>
+                <span class="tracker-icon">📋</span>
+            </div>
+            <div class="tracker-grid">
+                <div class="tracker-category">
+                    <span class="category-name">FOUNDATION</span>
+                    <span class="category-progress">50%</span>
+                    <div class="category-bar">
+                        <div style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="tracker-category">
+                    <span class="category-name">USER SYSTEMS</span>
+                    <span class="category-progress">0%</span>
+                    <div class="category-bar">
+                        <div style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="tracker-category">
+                    <span class="category-name">SOCIAL ENGINE</span>
+                    <span class="category-progress">0%</span>
+                    <div class="category-bar">
+                        <div style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="tracker-category">
+                    <span class="category-name">ENCRYPTION</span>
+                    <span class="category-progress">0%</span>
+                    <div class="category-bar">
+                        <div style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="tracker-category">
+                    <span class="category-name">DECENTRALIZATION</span>
+                    <span class="category-progress">0%</span>
+                    <div class="category-bar">
+                        <div style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="tracker-category">
+                    <span class="category-name">MOBILE/PWA</span>
+                    <span class="category-progress">0%</span>
+                    <div class="category-bar">
+                        <div style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tracker-footer">
+                <span class="tracker-doctrine">R-CORP · 42% COMPLETE · 43 TASKS REMAINING</span>
+            </div>
+        </div>
+
+        <!-- ========== NEXT MILESTONE ========== -->
+        <div class="milestone-panel">
+            <span class="milestone-icon">🎯</span>
+            <div class="milestone-content">
+                <span class="milestone-label">CURRENT MILESTONE:</span>
+                <span class="milestone-name">PHASE 04 · COMMUNITY FORUMS</span>
+            </div>
+            <span class="milestone-deadline">Q2 2024</span>
+        </div>
+
+        <!-- ========== LEGEND & MAP COORDINATES ========== -->
+        <div class="map-legend">
+            <div class="legend-item"><span class="legend-marker completed-marker">✓</span> COMPLETED</div>
+            <div class="legend-item"><span class="legend-marker">◉</span> IN PROGRESS</div>
+            <div class="legend-item"><span class="legend-marker pending-marker">○</span> PLANNED</div>
+            <div class="legend-item"><span class="doctrine-marker">⛧</span> R-CORP ACCOUNTABLE</div>
+        </div>
+
+        <!-- ========== FOOTER NAVIGATION ========== -->
         <div class="footer-nav">
-            <a href="index.html" class="back-btn">← Return to base</a>
-            <div class="map-coordinates">N 40°· W 74° · CLASSIFIED</div>
+            <div class="nav-links">
+                <a href="index.html" class="back-btn">← MAIN TERMINAL</a>
+                <a href="navigate.php" class="back-btn">← NAVIGATION HUB</a>
+                <a href="about.php" class="back-btn">← DECENSORWEB</a>
+                <a href="privacy.php" class="back-btn">← PRIVACY</a>
+                <a href="contact.php" class="back-btn">← CONTACT</a>
+            </div>
+            <div class="map-coordinates">
+                <span class="coordinate">OVERTHROW · SECTOR 7</span>
+                <span class="coordinate-doctrine">⛧ R-CORP ⛧</span>
+                <span class="coordinate-timestamp">
+                    <?php echo date('Y.m.d'); ?>
+                </span>
+            </div>
         </div>
+
+        <!-- SECURE BUILD TIMESTAMP -->
+        <!-- ROADMAP v4.0 · 42% COMPLETE · THEME READY · MOBILE OPTIMIZED -->
     </div>
+
+    <!-- PWA SUPPORT (future) -->
+    <script>
+        // Register service worker for PWA when ready
+        if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+            window.addEventListener('load', () => {
+                // Will be implemented in Phase 07
+                console.log('PWA ready for service worker registration');
+            });
+        }
+    </script>
 </body>
 
 </html>

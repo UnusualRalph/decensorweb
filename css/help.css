@@ -1,0 +1,819 @@
+/* 
+ * about.css 
+ * DECENSORWEB MANIFESTO · R-CORP ACCOUNTABILITY
+ * SECURE · EXTERNAL ONLY · CSP COMPLIANT
+ * CONTACT: rrralefaso@outlook.com
+ * NAVIGATION: RETURNS TO INDEX.HTML
+ * FILE: css/about.css
+ */
+
+/* ========== TACTICAL MAP FOUNDATION ========== */
+.manifesto-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: rgba(8, 8, 8, 0.98);
+    border: 1px solid #3a1a1a;
+    box-shadow: 12px 12px 0 rgba(139, 0, 0, 0.3),
+        0 0 0 1px #330000 inset;
+    position: relative;
+}
+
+/* ========== ICON GRID ========== */
+.icon-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 2rem 0 3rem;
+    flex-wrap: wrap;
+}
+
+.manifesto-icon {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ff0000;
+    padding: 0.5rem;
+    background: #0a0a0a;
+    box-shadow: 8px 8px 0 #3a0000;
+    object-fit: cover;
+    transition: all 0.2s;
+}
+
+.manifesto-icon:hover {
+    box-shadow: 4px 4px 0 #8b0000;
+    border-color: #ff7777;
+}
+
+.icon-fallback {
+    display: none;
+    width: 120px;
+    height: 120px;
+    background: #1a0000;
+    border: 3px solid #ff0000;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ff4444;
+    text-shadow: 2px 2px 0 #2a0000;
+    box-shadow: 8px 8px 0 #3a0000;
+}
+
+/* ========== R-CORP SHIELD ========== */
+.rcorp-shield {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1e1e1e;
+    border: 2px solid #8b0000;
+    padding: 1rem 1.5rem;
+    box-shadow: 6px 6px 0 #2a0000;
+    min-width: 140px;
+    transform: rotate(1deg);
+}
+
+.shield-letter {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #ff3333;
+    line-height: 1;
+    text-shadow: 3px 3px 0 #3a0000;
+}
+
+.shield-caption {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: #aaa;
+    border-top: 2px solid #8b0000;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* ========== TYPOGRAPHY ========== */
+.manifesto-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #ff0000;
+    border-bottom: 4px double #8b0000;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 6px;
+    word-break: break-word;
+    text-shadow: 2px 2px 0 #300000;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.manifesto-subheader {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccaaaa;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    border-left: 4px solid #550000;
+    border-right: 4px solid #550000;
+    padding: 1.2rem;
+    background: rgba(80, 0, 0, 0.1);
+}
+
+.emphasis-red {
+    color: #ff6666;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px dotted #ff0000;
+}
+
+/* ========== MISSION BLOCK ========== */
+.core-mission {
+    background: rgba(100, 0, 0, 0.15);
+    border-left: 8px solid #ff0000;
+    padding: 2rem;
+    margin: 3rem 0;
+    border-top: 2px solid #5a1e1e;
+    border-bottom: 2px solid #5a1e1e;
+    position: relative;
+}
+
+.mission-symbol {
+    font-size: 2rem;
+    color: #8b0000;
+    opacity: 0.7;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.mission-statement {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffc0c0;
+    border-left: 5px solid #ff4444;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    line-height: 1.7;
+}
+
+.doctrine-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+}
+
+.doctrine-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    border-bottom: 1px dashed #4a1a1a;
+    padding-bottom: 0.8rem;
+    color: #dddddd;
+}
+
+/* ========== ACCOUNTABILITY PANEL ========== */
+.accountability-panel {
+    border: 3px solid #5a1e1e;
+    background: #0d0d0d;
+    margin: 4rem 0;
+    box-shadow: 10px 10px 0 #2a0000;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a0000;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #8b0000;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.rcorp-insignia {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #ff7777;
+    letter-spacing: 5px;
+}
+
+.authority-stamp {
+    background: #000000;
+    color: #ff6666;
+    padding: 0.5rem 1.5rem;
+    border: 1px dashed #ff0000;
+    font-weight: 900;
+    transform: rotate(-1deg);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.accountability-content {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.seal-mark {
+    font-size: 5rem;
+    color: #8b0000;
+    opacity: 0.6;
+    flex: 0 0 auto;
+}
+
+.accountability-text {
+    flex: 1;
+}
+
+.accountability-text h3 {
+    color: #ff8888;
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 0.8rem;
+}
+
+.accountability-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background: #0a0a0a;
+    padding: 1.5rem;
+    border-left: 8px solid #8b0000;
+    margin: 1rem 0;
+}
+
+.accountability-fact {
+    margin-top: 1.5rem;
+    background: #1e1e1e;
+    padding: 1.2rem;
+    border: 1px solid #6b2b2b;
+    font-weight: 500;
+    border-left: 4px solid #ff5555;
+}
+
+.accountability-footer {
+    background: #1a1a1a;
+    padding: 1rem 2rem;
+    text-align: right;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    border-top: 1px solid #8b0000;
+    color: #aa8080;
+    text-transform: uppercase;
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact-section {
+    margin: 4rem 0;
+}
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-card {
+    background: #0f0f0f;
+    border: 2px solid #550000;
+    padding: 2rem;
+    box-shadow: 7px 7px 0 #2a0000;
+    transition: all 0.2s;
+}
+
+.contact-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0 #3a0000;
+    border-color: #8b0000;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: #ffaaaa;
+    margin: 0.5rem 0 1rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #8b4b4b;
+    padding-bottom: 0.8rem;
+}
+
+.contact-email {
+    background: #1a1a1a;
+    padding: 1.2rem;
+    border-left: 6px solid #ff5555;
+    margin: 1.2rem 0;
+    word-break: break-all;
+}
+
+.email-label {
+    color: #ff9999;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.contact-link {
+    color: #ff8888;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px dashed #ff5555;
+    padding-bottom: 0.2rem;
+    transition: all 0.2s;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.contact-note {
+    color: #ccaaaa;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px dotted #6b2b2b;
+}
+
+.contact-ref {
+    display: block;
+    color: #aa8080;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* ========== SECTION HEADINGS ========== */
+.section-heading {
+    color: #ff7777;
+    border-left: 10px solid #8b0000;
+    padding-left: 1.5rem;
+    margin: 4rem 0 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* ========== PILLAR GRID ========== */
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.pillar-card {
+    border: 2px solid #550000;
+    padding: 2rem 1.5rem;
+    background: #0f0f0f;
+    box-shadow: 7px 7px 0 #2a0000;
+    transition: all 0.2s;
+}
+
+.pillar-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0 #3a0000;
+    border-color: #8b0000;
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pillar-card h3 {
+    color: #ffaaaa;
+    margin: 0.5rem 0 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #8b4b4b;
+    padding-bottom: 0.8rem;
+}
+
+.pillar-card p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ========== DEV SECTION ========== */
+.dev-section {
+    margin: 4rem 0;
+}
+
+.code-block {
+    background: #030303;
+    border: 1px solid #8b0000;
+    padding: 1.8rem;
+    font-family: 'Courier New', monospace;
+    border-left: 12px solid #ff0000;
+    overflow-x: auto;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    color: #dddddd;
+}
+
+.code-prompt {
+    color: #ff8888;
+    font-weight: bold;
+}
+
+.code-comment {
+    color: #77aa77;
+    font-style: italic;
+}
+
+.dev-badge {
+    display: inline-block;
+    background: #2a0a0a;
+    color: #ffaaaa;
+    padding: 0.8rem 1.8rem;
+    border: 1px solid #ff5555;
+    margin-top: 1.5rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* ========== SUPPORT SECTION ========== */
+.support-section {
+    margin: 4rem 0;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.support-card {
+    background: #111111;
+    border: 1px solid #6b2b2b;
+    padding: 2rem 1.5rem;
+    box-shadow: 6px 6px 0 #2a1a1a;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-card-header {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ff7777;
+    margin-bottom: 1rem;
+    border-bottom: 2px dashed #8b0000;
+    padding-bottom: 0.6rem;
+}
+
+.support-card p {
+    color: #cccccc;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.support-button {
+    background: #1e1e1e;
+    color: #ff9999;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    border: 1px solid #ff0000;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-weight: bold;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.support-button:hover {
+    background: #8b0000;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.support-tag {
+    display: inline-block;
+    background: #0a0a0a;
+    border: 1px dashed #aa5555;
+    padding: 0.4rem 1rem;
+    margin: 0.4rem 0.2rem;
+    font-size: 0.8rem;
+    color: #ccaaaa;
+    font-family: monospace;
+}
+
+/* ========== LEGAL DOCTRINE ========== */
+.legal-doctrine {
+    margin-top: 4rem;
+    border-top: 3px double #8b0000;
+    border-bottom: 1px solid #5a1e1e;
+    padding: 2rem 0;
+}
+
+.license-line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+}
+
+.version-tag {
+    color: #aa5555;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.doctrine-short {
+    background: #1a0a0a;
+    padding: 1.5rem;
+    border-left: 8px solid #8b0000;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    color: #ddbbbb;
+    line-height: 1.6;
+}
+
+/* ========== SIGNATURE AREA ========== */
+.signature-area {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin: 4rem 0 2rem;
+    padding: 2rem;
+    background: rgba(20, 0, 0, 0.3);
+    flex-wrap: wrap;
+    border: 1px solid #5a2a2a;
+}
+
+.rcorp-sigil {
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rcorp-logo-image {
+    max-width: 120px;
+    border: 2px solid #8b0000;
+    padding: 0.5rem;
+    background: #000000;
+}
+
+.sigil-fallback .sigil-fallback-text {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #8b0000;
+}
+
+.signature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.maintainer {
+    font-size: 1.2rem;
+    color: #ffaaaa;
+    margin-bottom: 0.3rem;
+}
+
+.tagline {
+    color: #aaaaaa;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.doctrine-ref {
+    font-size: 0.8rem;
+    color: #bb6666;
+    letter-spacing: 2px;
+    border-top: 1px dotted #8b4b4b;
+    padding-top: 0.8rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+}
+
+/* ========== FOOTER NAVIGATION ========== */
+.footer-nav .back-btn {
+    display: inline-block;
+    color: #ff5555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border: 1px solid #ff0000;
+    background: rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    box-shadow: 3px 3px 0 #3a0000;
+    transition: all 0.2s;
+}
+
+.footer-nav .back-btn:hover {
+    background: #8b0000;
+    color: #000000;
+    border-color: #ffffff;
+    box-shadow: 5px 5px 0 #1a0000;
+}
+
+.nav-indicator {
+    font-family: monospace;
+    color: #8b4b4b;
+    font-size: 0.7rem;
+    margin-left: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 1px solid #5a2a2a;
+    text-transform: uppercase;
+}
+
+.contact-hash {
+    font-family: monospace;
+    color: #8b4b4b;
+    font-size: 0.7rem;
+    margin-left: 0.8rem;
+    padding-left: 0.8rem;
+    border-left: 1px solid #5a2a2a;
+}
+
+.fingerprint {
+    font-family: monospace;
+    color: #6b4b4b;
+    font-size: 0.7rem;
+    margin-left: 0.8rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .manifesto-container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .manifesto-title {
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+    }
+
+    .accountability-content {
+        flex-direction: column;
+    }
+
+    .seal-mark {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .panel-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .signature-area {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .contact-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-email {
+        word-break: break-all;
+    }
+
+    .footer-nav .map-coordinates {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .manifesto-container {
+        width: 100%;
+        padding: 1.2rem;
+        margin: 0.5rem;
+        box-shadow: 8px 8px 0 rgba(139, 0, 0, 0.3);
+    }
+
+    .manifesto-title {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .manifesto-subheader {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    .rcorp-shield {
+        transform: none;
+        width: 100%;
+    }
+
+    .shield-letter {
+        font-size: 2.2rem;
+    }
+
+    .mission-statement {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .accountability-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .pillar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .license-line {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .signature-area {
+        padding: 1.2rem;
+        gap: 1.5rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .back-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-nav .map-coordinates {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .nav-indicator,
+    .contact-hash,
+    .fingerprint {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 0.2rem;
+    }
+
+    .contact-link {
+        font-size: 0.95rem;
+        word-break: break-all;
+    }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+
+    .back-btn,
+    .sponsor-badge,
+    .support-button,
+    .fingerprint,
+    .contact-hash,
+    .nav-indicator,
+    .dev-badge,
+    .support-tag {
+        display: none !important;
+    }
+
+    .manifesto-container {
+        box-shadow: none;
+        border: 1px solid #333;
+    }
+
+    .contact-link {
+        color: #000000;
+        text-decoration: underline;
+    }
+}

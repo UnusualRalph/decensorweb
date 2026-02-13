@@ -3,11 +3,12 @@
  * DECENSORWEB · ABOUT.PHP
  * SECURITY-FIRST MANIFESTO PAGE
  * CONTACT: rrralefaso@outlook.com · R-CORP ACCOUNTABILITY
+ * NAVIGATION: RETURNS TO INDEX.HTML
  * 
  * COMPLETE REDESIGN - ZERO INLINE CSS/JS
  * ALL SECURITY HEADERS · INPUT VALIDATION · CSP · SRI
  * 
- * R-CORP ACCOUNTABILITY DOCTRINE v3.1
+ * R-CORP ACCOUNTABILITY DOCTRINE v3.2
  */
 
 // ========== SECURITY HEADERS ==========
@@ -43,8 +44,8 @@ $csp_nonce = bin2hex(random_bytes(16));
 
 // ========== SECURE CONFIGURATION ==========
 $config = [
-    'version' => '3.1.0',
-    'build' => 'HARDENED_RELEASE',
+    'version' => '3.2.0',
+    'build' => 'INDEX_RETURN',
     'environment' => 'production',
     'contact_email' => 'rrralefaso@outlook.com'
 ];
@@ -126,6 +127,7 @@ $short_fingerprint = substr($fingerprint, 0, 8);
         ALL ACCOUNTS PROTECTED · NO CENSORSHIP COMPLIANCE
         CONTACT: rrralefaso@outlook.com
         SECURE BUILD: <?php echo e($config['build']); ?> · <?php echo e(date('Y-m-d')); ?>
+        NAVIGATION: RETURNS TO INDEX.HTML
     -->
 
     <div class="roadmap-container manifesto-container">
@@ -329,23 +331,24 @@ $short_fingerprint = substr($fingerprint, 0, 8);
             <div class="signature-text">
                 <span class="maintainer">Created and Maintained by <strong>R-CORP</strong></span>
                 <span class="tagline"><i>Empowering digital freedom with total accountability.</i></span>
-                <span class="doctrine-ref">ACCOUNTABILITY DOCTRINE v3.1 · CONTACT: rrralefaso@outlook.com</span>
+                <span class="doctrine-ref">ACCOUNTABILITY DOCTRINE v3.2 · CONTACT: rrralefaso@outlook.com</span>
                 <span class="contact-ref">✉️ SECURE COMMS: <?php echo e($manifesto['contact']); ?></span>
             </div>
         </div>
 
-        <!-- ========== FOOTER ========== -->
+        <!-- ========== FOOTER NAVIGATION · RETURN TO INDEX.HTML ========== -->
         <div class="footer-nav">
-            <a href="roadmap.html" class="back-btn" rel="noopener noreferrer">← PROJECT:OVERTHROW ROADMAP</a>
+            <a href="index.html" class="back-btn" rel="noopener noreferrer">← RETURN TO INDEX</a>
             <div class="map-coordinates">
                 <span class="coordinate">DECENSOR · SECTOR 7</span>
+                <span class="nav-indicator">[MAIN TERMINAL]</span>
                 <span class="contact-hash">[CONTACT: <?php echo e(substr(hash('sha256', $manifesto['contact']), 0, 8)); ?>]</span>
                 <span class="fingerprint">[<?php echo e($short_fingerprint); ?>]</span>
             </div>
         </div>
 
         <!-- SECURE BUILD TIMESTAMP (COMMENT ONLY) -->
-        <!-- BUILD: <?php echo e(date('Y-m-d H:i:s')); ?> · CONTACT: rrralefaso@outlook.com · NONCE: <?php echo e(substr($csp_nonce, 0, 8)); ?> · R-CORP AUDIT PASSED -->
+        <!-- BUILD: <?php echo e(date('Y-m-d H:i:s')); ?> · CONTACT: rrralefaso@outlook.com · NONCE: <?php echo e(substr($csp_nonce, 0, 8)); ?> · NAV: INDEX.HTML · R-CORP AUDIT PASSED -->
     </div>
 
     <!-- JAVASCRIPT · EXTERNAL · SRI PROTECTED · NONCE ENFORCED -->
